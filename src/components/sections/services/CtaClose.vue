@@ -1,0 +1,88 @@
+<template>
+  <section ref="ctaSection" class="relative py-40 bg-white overflow-hidden border-t border-slate-100">
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
+         :style="{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '30px 30px' }">
+    </div>
+
+    <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 text-[20vw] font-black text-slate-50 select-none pointer-events-none whitespace-nowrap italic tracking-tighter uppercase opacity-50">
+      Build Now
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10 text-center">
+      
+      <div 
+        class="max-w-4xl mx-auto transition-all duration-1000 transform"
+        :class="isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'"
+      >
+        <h2 class="text-[10px] font-black uppercase tracking-[0.6em] text-emerald-600 mb-8 italic">
+          // Ready to deployment?
+        </h2>
+        
+        <h3 class="text-5xl md:text-8xl font-black text-slate-900 leading-[0.85] tracking-tighter uppercase mb-12">
+          MAU PUNYA WEBSITE <br/> 
+          <span class="text-slate-400 italic font-light">TANPA RIBET?</span>
+        </h3>
+
+        <p class="text-slate-500 font-medium text-lg md:text-xl max-w-xl mx-auto mb-16 leading-relaxed">
+          Jangan biarkan kompetitor mendahului Anda. Amankan alamat website bisnis Anda hari ini dan mulai jualan dengan lebih profesional.
+        </p>
+
+        <div class="flex flex-col items-center gap-6">
+          <a 
+            href="https://wa.me/yournumber" 
+            class="group relative inline-flex items-center gap-6 md:px-12 md:py-6 px-4 py-3 bg-slate-900 text-white overflow-hidden transition-all duration-500 hover:bg-emerald-600 shadow-2xl hover:shadow-emerald-500/40"
+          >
+            <div class="absolute inset-0 w-0 bg-emerald-500 transition-all duration-500 group-hover:w-full"></div>
+            
+            <span class="relative z-10 text-sm font-black uppercase tracking-[0.3em]">
+              Konsultasi Gratis Sekarang
+            </span>
+            <svg 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="3" 
+              class="relative z-10 w-5 h-5 group-hover:translate-x-2 transition-transform duration-500"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+
+          <div class="flex items-center gap-3 mt-4">
+            <div class="flex -space-x-2">
+              <div v-for="i in 3" :key="i" class="w-6 h-6 rounded-full border-2 border-white bg-slate-200"></div>
+            </div>
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+              Join 50+ UMKM yang sudah go-digital
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const isVisible = ref(false);
+const ctaSection = ref(null);
+let observer = null;
+
+onMounted(() => {
+  observer = new IntersectionObserver(([entry]) => {
+    isVisible.value = entry.isIntersecting;
+  }, { threshold: 0.3 });
+
+  if (ctaSection.value) observer.observe(ctaSection.value);
+});
+
+onUnmounted(() => observer?.disconnect());
+</script>
+
+<style scoped>
+/* Transisi halus untuk scaling dan opacity */
+.scale-95 { transform: scale(0.95) translateY(20px); }
+.scale-100 { transform: scale(1) translateY(0); }
+</style>
