@@ -1,7 +1,7 @@
 <template>
   <section 
     ref="aboutHero" 
-    class="relative min-h-[90vh] flex items-center pt-24 pb-16 bg-[#FDFDFD] overflow-hidden"
+    class="relative min-h-[90vh] flex items-center pt-32 pb-16 bg-[#FDFDFD] overflow-hidden"
   >
     <div class="absolute inset-0 z-0 pointer-events-none">
       <div 
@@ -31,7 +31,7 @@
           </header>
           
           <h2 class="text-xl md:text-2xl text-slate-500 max-w-2xl leading-relaxed mb-10 font-medium italic">
-            "Kami mengubah kode menjadi profit melalui ekosistem yang teroptimasi secara <span class="text-slate-900 font-bold">SEO dan Konversi</span>." [cite: 11]
+            "Kami mengubah kode menjadi profit melalui ekosistem yang teroptimasi secara <span class="text-slate-900 font-bold">SEO dan Konversi</span>." 
           </h2>
 
           <div class="flex flex-wrap gap-10 items-center border-t border-emerald-100 pt-10">

@@ -20,14 +20,15 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-        <div 
-          v-for="(member, index) in team" 
-          :key="index"
-          class="group relative"
-          :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
-          :style="{ transitionDelay: `${index * 200}ms`, transitionDuration: '1000ms' }"
-        >
+<div class="flex flex-wrap justify-center gap-12">
+  
+          <div 
+            v-for="(member, index) in team" 
+            :key="index"
+            class="group relative w-full md:w-[calc(50%-3rem)] lg:w-[calc(33.33%-3rem)] max-w-sm"
+            :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16']"
+            :style="{ transitionDelay: `${index * 200}ms`, transitionDuration: '1000ms' }"
+          > 
           <div class="relative aspect-[3/4] overflow-hidden bg-slate-100 mb-6 grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out">
             <img 
               :src="member.image" 
@@ -71,26 +72,19 @@ let observer = null;
 
 const team = [
   {
-    name: "Alex Pratama",
-    role: "Lead Architect",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
-    bio: "Bertanggung jawab atas integritas kode dan performa sistem. Memastikan website Anda tidak hanya cantik, tapi juga cepat dan aman.",
-    tools: ["Vue 3", "Node.js", "PostgreSQL"]
+    name: "Leonardus Theodorus Kanters",
+    role: "Founder",
+    image: "src/assets/image/teams/leonardus-theodorus-kanters.png",
+    bio: "Bertanggung jawab atas hubungan dengan klien se rta koordinasi tim internal. Memastikan setiap proyek berjalan lancar, terarah, dan sesuai dengan kebutuhan klien.",
+    tools:  ["Client Communication", "Team Coordination", "Project Planning"]
   },
   {
-    name: "Siska Utami",
-    role: "UI/UX Strategist",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800",
-    bio: "Penerjemah kebutuhan bisnis ke dalam antarmuka yang intuitif. Fokusnya adalah menghilangkan friksi pada pengalaman pengguna.",
-    tools: ["Figma", "Tailwind", "User Research"]
+    name: "Syehan Mochsin Althubaiti",
+    role: "Co-Founder",
+    image: "src/assets/image/teams/syehan-mochsin-althubaiti.png",
+    bio: "Bertanggung jawab atas perancangan, pengembangan, dan optimalisasi sistem. Memastikan performa, keamanan, dan skalabilitas aplikasi tetap terjaga.",
+    tools: ["Fullstack Development", "UI/UX Desin", "Database Management"]
   },
-  {
-    name: "Budi Santoso",
-    role: "SEO & Copywriter",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800",
-    bio: "Menyusun narasi yang menjual dan teknis SEO yang memastikan UMKM Anda muncul di radar calon pembeli potensial.",
-    tools: ["Ahrefs", "Google Analytics", "SEM"]
-  }
 ];
 
 onMounted(() => {

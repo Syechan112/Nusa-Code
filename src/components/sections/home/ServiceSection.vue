@@ -58,23 +58,23 @@ const navigation = [
 
 const services = [
   { 
-    title: 'Landing Page Persuasif', 
-    desc: 'Website satu halaman yang bekerja seperti tim sales 24 jam. Fokus mengonversi pengunjung menjadi pembeli seketika.', 
+    title: 'Website Jualan (Landing Page)', 
+    desc: 'Bukan sekadar hiasan. Kami buatkan halaman penawaran yang menghipnotis pengunjung untuk segera klik tombol beli atau WhatsApp.', 
     icon: iconWeb 
   },
   { 
-    title: 'Company Profile Digital', 
-    desc: 'Bangun kredibilitas instan. Ubah tampilan bisnis UMKM Anda menjadi brand profesional yang dipercaya pelanggan dan mitra.', 
+    title: 'Brand UMKM Profesional', 
+    desc: 'Ubah kesan "bisnis rumahan" jadi "brand berkelas". Website Company Profile yang bikin calon pelanggan makin percaya dan loyal.', 
     icon: iconDesign 
   },
   { 
-    title: 'Dominasi Mesin Pencari', 
-    desc: 'Optimasi SEO agar bisnis Anda muncul saat pelanggan mencari solusi, bukan hanya saat mereka mencari nama brand Anda.', 
+    title: 'Muncul di Pencarian Google', 
+    desc: 'Kami bantu toko Anda ditemukan calon pembeli yang sedang mencari jasa/produk Anda di Google. SEO lokal khusus untuk UMKM.', 
     icon: iconSeo 
   },
   { 
-    title: 'Manajemen Teknis Total', 
-    desc: 'Lupakan pusingnya urusan hosting dan error. Kami jaga "toko digital" Anda tetap lancar sementara Anda fokus kembangkan bisnis.', 
+    title: 'Website Terima Beres', 
+    desc: 'Anda fokus jualan, biar kami yang urus hosting, domain, dan teknisnya. Website aman, cepat, dan selalu bisa diakses pelanggan.', 
     icon: iconMaintenance 
   }
 ];
