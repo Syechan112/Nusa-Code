@@ -125,7 +125,7 @@ const portfolioItems = [
     ],
     result: "Modern Branding | Multiple Page",
     testimonial: "Website AI yang profesional dan futuristik.",
-    image: "@/assets/image/portofolio/nexora-ai.png",
+    image: "assets/image/portofolio/nexora-ai.png",
     url: "https://nexoraaid.netlify.app"
   },
   {
@@ -140,7 +140,7 @@ const portfolioItems = [
     ],
     result: "High Conversion | Multiple Page",
     testimonial: "Tampilan premium meningkatkan kepercayaan klien.",
-    image: "src/assets/image/portofolio/nexus-studo.png",
+    image: "assets/image/portofolio/nexus-studo.png",
     url: "https://nexus-studio-agency.netlify.app"
   },
   {
@@ -155,7 +155,7 @@ const portfolioItems = [
     ],
     result: "+60% Online Orders",
     testimonial: "Sistem booking sangat membantu operasional kami.",
-    image: "src/assets/image/portofolio/call-clean.png",
+    image: "assets/image/portofolio/call-clean.png",
     url: "https://call-clean.netlify.app"
   },
   {
@@ -170,7 +170,7 @@ const portfolioItems = [
     ],
     result: "+45% Local Traffic",
     testimonial: "Reservasi meningkat drastis setelah website launch.",
-    image: "src/assets/image/portofolio/coffe-senja.png",
+    image: "assets/image/portofolio/coffe-senja.png",
     url: "https://coffe-senja.netlify.app"
   },
   {
@@ -185,7 +185,7 @@ const portfolioItems = [
     ],
     result: "Premium Look",
     testimonial: "Website elegan yang mencerminkan kualitas produk.",
-    image: "src/assets/image/portofolio/oakline.png",
+    image: "assets/image/portofolio/oakline.png",
     url: "https://oakline-furniture.netlify.app"
   },
   {
@@ -200,7 +200,7 @@ const portfolioItems = [
     ],
     result: "Operational Efficiency",
     testimonial: "Sistem tracking real-time sangat membantu pelanggan.",
-    image: "src/assets/image/portofolio/turbo-logix.png",
+    image: "assets/image/portofolio/turbo-logix.png",
     url: "https://turbologix.netlify.app"
   },
   {
@@ -215,7 +215,7 @@ const portfolioItems = [
     ],
     result: "+50% Direct Booking",
     testimonial: "Sekarang tamu lebih sering booking langsung lewat website.",
-    image: "src/assets/image/portofolio/panimbang-motel.png",
+    image: "assets/image/portofolio/panimbang-motel.png",
     url: "https://panimbang-motel.netlify.app"
   }
 ];
