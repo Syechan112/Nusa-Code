@@ -125,7 +125,7 @@ const portfolioItems = [
     ],
     result: "Modern Branding | Multiple Page",
     testimonial: "Website AI yang profesional dan futuristik.",
-    image: "src/assets/image/portofolio/nexora-ai.png",
+    image: "@/assets/image/portofolio/nexora-ai.png",
     url: "https://nexoraaid.netlify.app"
   },
   {
