@@ -31,7 +31,10 @@
       </nav>
 
       <div class="flex justify-end">
-        <a href="#" class="px-8 py-2.5 bg-slate-900 text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-emerald-600 transition-all duration-300 active:scale-95">
+        <a href="https://wa.me/628979673149" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="px-8 py-2.5 bg-slate-900 text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:bg-emerald-600 transition-all duration-300 active:scale-95 inline-block">
           Hubungi Kami
         </a>
       </div>

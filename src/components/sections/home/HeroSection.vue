@@ -25,7 +25,7 @@
           </p>
 
           <div :class="isVisible ? 'animate-fade-in-up delay-400' : 'opacity-0'" class="flex flex-wrap items-center justify-center lg:justify-start gap-5">
-            <a href="#" class="px-10 py-4 bg-[#41644A] text-white rounded-full font-bold shadow-2xl shadow-emerald-900/20 hover:scale-105 transition-all">
+            <a :href="whatsappLink" target="_blank" class="px-10 py-4 bg-[#41644A] text-white rounded-full font-bold shadow-2xl shadow-emerald-900/20 hover:scale-105 transition-all">
               Mulai Konsultasi
             </a>
 
@@ -109,6 +109,10 @@ const scrollToNext = () => {
     behavior: 'smooth'       
   });
 };
+
+const whatsappNumber = "628979673149";
+const whatsappMessage = encodeURIComponent("Halo NusaCode, saya ingin konsultasi.");
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 </script>
 
 <style scoped>

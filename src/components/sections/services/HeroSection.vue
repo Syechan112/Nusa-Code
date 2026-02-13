@@ -1,5 +1,5 @@
 <template>
-  <section ref="heroSection" class="relative min-h-screen flex items-center bg-white overflow-hidden pt-20 pb-10">
+  <section ref="heroSection" class="relative min-h-screen flex items-center bg-white overflow-hidden pt-32 pb-16">
     <div class="absolute inset-0 opacity-[0.1] pointer-events-none" 
          :style="{ backgroundImage: 'radial-gradient(#000 0.8px, transparent 0.8px)', backgroundSize: '24px 24px' }">
     </div>

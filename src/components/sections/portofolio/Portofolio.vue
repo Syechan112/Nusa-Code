@@ -7,7 +7,7 @@
     <div class="container mx-auto px-6 relative z-10">
       <div class="max-w-3xl mb-24">
         <h2 class="text-xs font-black uppercase tracking-[0.4em] text-emerald-600 mb-4 inline-flex items-center gap-3">
-          <span class="w-8 h-[1px] bg-emerald-600"></span> 03. Galeri Karya
+          <span class="w-8 h-[1px] bg-emerald-600"></span> 03. Galeri Karya (Preview)
         </h2>
         <h3 class="text-5xl md:text-7xl font-black text-slate-900 leading-[0.85] tracking-tighter uppercase">
           BUKTI NYATA <br />
@@ -15,7 +15,7 @@
         </h3>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
         <div 
           v-for="(item, index) in portfolioItems" 
           :key="index"
@@ -28,16 +28,39 @@
           ]"
           :style="{ transitionDelay: `${index * 100}ms` }"
         >
-          <div class="relative aspect-[4/5] overflow-hidden bg-slate-100 border border-slate-200 shadow-2xl transition-all duration-700 group-hover:shadow-emerald-500/10 group-hover:-translate-y-2">
+          <div class="relative aspect-[19/9] overflow-hidden bg-slate-100 border border-slate-200 shadow-2xl transition-all duration-700 group-hover:shadow-emerald-500/10 group-hover:-translate-y-2">
             
-            <div class="absolute top-4 left-4 z-20 flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-[-10px] group-hover:translate-y-0">
-              <span v-for="tech in item.stack" :key="tech" class="px-3 py-1 bg-white/90 backdrop-blur-md text-[8px] font-black uppercase tracking-widest text-slate-900">
-                {{ tech }}
-              </span>
-            </div>
+          <div 
+            class="absolute top-5 left-5 right-5 z-20 flex flex-wrap gap-2
+                  opacity-0 group-hover:opacity-100
+                  transition-all duration-700
+                  translate-y-[-12px] group-hover:translate-y-0"
+          >
+            <span 
+              v-for="tech in item.focus" 
+              :key="tech"
+              class="px-4 py-1.5 
+                    bg-white/10 
+                    backdrop-blur-lg 
+                    border border-white/20
+                    text-[9px] font-semibold
+                    tracking-[0.15em] uppercase
+                    text-white
+                    rounded-full
+                    shadow-lg
+                    hover:bg-emerald-500/20
+                    transition-all duration-300"
+            >
+              {{ tech }}
+            </span>
+          </div>
 
-            <div class="absolute inset-0 bg-slate-200 overflow-hidden">
-               <div class="w-full h-full bg-gradient-to-br from-slate-200 to-slate-300 group-hover:scale-110 transition-transform duration-1000"></div>
+            <div class="absolute inset-0 overflow-hidden">
+              <img 
+                :src="item.image"
+                :alt="item.title"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+              />
             </div>
 
             <div class="absolute inset-0 bg-slate-900/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 p-8 flex flex-col justify-end translate-y-4 group-hover:translate-y-0">
@@ -47,9 +70,14 @@
                   "{{ item.testimonial }}"
                 </p>
               </div>
-              <button class="w-full py-4 border border-emerald-500 text-emerald-500 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-emerald-500 hover:text-white transition-all">
-                Detail Case Study
-              </button>
+                  <a
+                    :href="item.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block w-full py-4 border border-emerald-500 text-emerald-500 text-[10px] font-black uppercase tracking-[0.3em] text-center hover:bg-emerald-500 hover:text-white transition-all"
+                  >
+                    Visit Live Website
+                  </a>
             </div>
           </div>
 
@@ -86,28 +114,109 @@ import { ref, onMounted, onUnmounted, reactive } from 'vue';
 
 const portfolioItems = [
   {
-    title: "Kedai Kopi Senja",
-    category: "Landing Page & Management",
-    year: "2023",
-    stack: ["Vue.js", "Tailwind", "SEO Optimized"],
-    result: "+45% Local Traffic",
-    testimonial: "Website yang dibuat Nusa Code meningkatkan reservasi meja secara signifikan.",
-  },
-  {
-    title: "Batik Nusantara",
-    category: "E-Commerce Platform",
+    title: "Nexora AI",
+    category: "AI Company Profile",
     year: "2024",
-    stack: ["E-Commerce", "Payment Gateway", "Speed Opt."],
-    result: "Automated Shipping",
-    testimonial: "Sistem adminnya sangat mudah digunakan bahkan untuk staf kami yang awam.",
+    focus: [
+      "AI Branding Strategy",
+      "Futuristic UI Design",
+      "Technology Positioning",
+      "Interactive Micro Animation"
+    ],
+    result: "Modern Branding | Multiple Page",
+    testimonial: "Website AI yang profesional dan futuristik.",
+    image: "src/assets/image/portofolio/nexora-ai.png",
+    url: "https://nexoraaid.netlify.app"
   },
   {
-    title: "Bengkel Maju Jaya",
-    category: "Local Authority Web",
+    title: "Nexus Studio Agency",
+    category: "Creative Agency",
+    year: "2024",
+    focus: [
+      "Vue.js Development",
+      "Creative Visual Direction",
+      "Conversion-Oriented Layout",
+      "Advanced UI Animation"
+    ],
+    result: "High Conversion | Multiple Page",
+    testimonial: "Tampilan premium meningkatkan kepercayaan klien.",
+    image: "src/assets/image/portofolio/nexus-studo.png",
+    url: "https://nexus-studio-agency.netlify.app"
+  },
+  {
+    title: "Call Clean",
+    category: "Service Company",
     year: "2023",
-    stack: ["GMB Integration", "Performance", "Clean Code"],
-    result: "Page 1 Google Search",
-    testimonial: "Sekarang pelanggan menemukan bengkel kami lebih mudah di Google Maps.",
+    focus: [
+      "Online Booking System",
+      "Service Funnel Optimization",
+      "Mobile First Experience",
+      "Local SEO Strategy"
+    ],
+    result: "+60% Online Orders",
+    testimonial: "Sistem booking sangat membantu operasional kami.",
+    image: "src/assets/image/portofolio/call-clean.png",
+    url: "https://call-clean.netlify.app"
+  },
+  {
+    title: "Coffee Senja",
+    category: "Cafe Landing Page",
+    year: "2023",
+    focus: [
+      "Brand Identity Development",
+      "Atmospheric Visual Design",
+      "Local Business SEO",
+      "Reservation Integration"
+    ],
+    result: "+45% Local Traffic",
+    testimonial: "Reservasi meningkat drastis setelah website launch.",
+    image: "src/assets/image/portofolio/coffe-senja.png",
+    url: "https://coffe-senja.netlify.app"
+  },
+  {
+    title: "Oakline Furniture",
+    category: "Furniture Showcase",
+    year: "2024",
+    focus: [
+      "Premium Product Showcase",
+      "Minimalist UI System",
+      "Catalog Architecture",
+      "Performance Optimization"
+    ],
+    result: "Premium Look",
+    testimonial: "Website elegan yang mencerminkan kualitas produk.",
+    image: "src/assets/image/portofolio/oakline.png",
+    url: "https://oakline-furniture.netlify.app"
+  },
+  {
+    title: "Turbologix",
+    category: "Logistic Company",
+    year: "2024",
+    focus: [
+      "Logistic System Interface",
+      "Real-Time Tracking UI",
+      "Operational Dashboard",
+      "Corporate Branding"
+    ],
+    result: "Operational Efficiency",
+    testimonial: "Sistem tracking real-time sangat membantu pelanggan.",
+    image: "src/assets/image/portofolio/turbo-logix.png",
+    url: "https://turbologix.netlify.app"
+  },
+  {
+    title: "Panimbang Motel",
+    category: "Hospitality Website",
+    year: "2023",
+    focus: [
+      "Direct Booking System",
+      "Hospitality Experience Design",
+      "Location & Maps Integration",
+      "Trust-Building Layout"
+    ],
+    result: "+50% Direct Booking",
+    testimonial: "Sekarang tamu lebih sering booking langsung lewat website.",
+    image: "src/assets/image/portofolio/panimbang-motel.png",
+    url: "https://panimbang-motel.netlify.app"
   }
 ];
 
