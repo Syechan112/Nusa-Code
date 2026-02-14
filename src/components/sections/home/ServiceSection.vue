@@ -31,7 +31,7 @@
       </div>
 
       <div class="flex justify-center" :class="isVisible ? 'animate-fade-in-up delay-500' : 'opacity-0'">
-        <RouterLink to="/layanan" class="group relative inline-flex items-center gap-3 py-4 px-10 bg-slate-900 text-white rounded-full font-bold overflow-hidden transition-all hover:bg-emerald-700 hover:pr-12">
+        <RouterLink :to="{ path: '/layanan', query: { scrollTo: 'price' } }" class="group relative inline-flex items-center gap-3 py-4 px-10 bg-slate-900 text-white rounded-full font-bold overflow-hidden transition-all hover:bg-emerald-700 hover:pr-12">
           <span>{{ navigation[0].title }}</span>
           <svg class="w-5 h-5 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -46,7 +46,6 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { RouterLink } from 'vue-router';
 
-// Import Assets SVG
 import iconWeb from '@/assets/icons/web.svg';
 import iconDesign from '@/assets/icons/design.svg';
 import iconSeo from '@/assets/icons/seo.svg';
@@ -111,7 +110,7 @@ onUnmounted(() => {
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
 
-/* Efek agar icon putih saat di hover */
+
 .group:hover img {
   filter: brightness(0) invert(1);
 }

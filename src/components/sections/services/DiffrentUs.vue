@@ -1,20 +1,20 @@
 <template>
-  <section ref="whySection" class="relative py-32 bg-white overflow-hidden border-t border-slate-100">
+  <section ref="whySection" class="relative py-32 bg-white overflow-hidden border-t border-emerald-50">
     <div class="absolute inset-0 opacity-[0.02] pointer-events-none" 
-         :style="{ backgroundImage: 'linear-gradient(#000 1.2px, transparent 1.2px), linear-gradient(90deg, #000 1.2px, transparent 1.2px)', backgroundSize: '60px 60px' }">
+         :style="{ backgroundImage: 'linear-gradient(#064e3b 1px, transparent 1px), linear-gradient(90deg, #064e3b 1px, transparent 1px)', backgroundSize: '60px 60px' }">
     </div>
 
     <div class="container mx-auto px-6 relative z-10">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
         <div class="max-w-2xl">
-          <h2 class="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-600 mb-6 italic">// The Differentiator</h2>
+          <h2 class="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-800/60 mb-6 italic">// The Differentiator</h2>
           <h3 class="text-4xl md:text-6xl font-black text-slate-900 leading-[0.9] tracking-tighter uppercase">
-            KENAPA UMKM <br/> <span class="text-slate-400">MEMILIH KAMI.</span>
+            KENAPA UMKM <br/> <span class="text-emerald-800">MEMILIH KAMI.</span>
           </h3>
         </div>
         <div class="md:text-right">
-          <p class="text-slate-500 font-medium text-sm max-w-xs md:ml-auto leading-relaxed border-r-4 border-emerald-500 pr-6">
+          <p class="text-slate-700 font-medium text-sm max-w-xs md:ml-auto leading-relaxed border-r-4 border-emerald-800/30 pr-6">
             Kami fokus pada hasil nyata untuk bisnis Anda, bukan sekadar memamerkan istilah teknis yang rumit.
           </p>
         </div>
@@ -24,36 +24,30 @@
         <div 
           v-for="(item, index) in reasons" 
           :key="index"
-          class="group relative p-10 bg-white border border-slate-100 hover:border-emerald-500 transition-all duration-700 overflow-hidden"
+          class="group relative p-10 bg-white border border-slate-100 hover:border-emerald-800/20 transition-all duration-700 overflow-hidden"
           :class="[isVisible ? 'animate-in' : 'animate-out']"
           :style="{ '--delay': `${index * 150}ms` }"
         >
-          <div class="absolute -bottom-6 -right-4 text-9xl font-black text-slate-50 group-hover:text-emerald-50 transition-colors duration-700 pointer-events-none uppercase italic">
+          <div class="absolute -bottom-6 -right-4 text-9xl font-black text-emerald-50/20 transition-colors duration-700 pointer-events-none uppercase italic">
             {{ item.short }}
           </div>
 
           <div class="relative z-10">
-            <div class="w-10 h-10 border-2 border-slate-900 flex items-center justify-center mb-10 group-hover:bg-slate-900 group-hover:text-white transition-all duration-500">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-5 h-5" v-html="item.svgIcon"></svg>
+            <div class="w-10 h-10 border-2 border-emerald-800/30 flex items-center justify-center mb-10 group-hover:bg-emerald-800 group-hover:text-white transition-all duration-500 text-emerald-800">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5" v-html="item.svgIcon"></svg>
             </div>
 
-            <h4 class="text-xl font-black text-slate-900 uppercase italic mb-4 tracking-tighter">
+            <h4 class="text-xl font-black text-slate-800 uppercase italic mb-4 tracking-tighter">
               {{ item.title }}
             </h4>
             
-            <p class="text-sm text-slate-500 font-medium leading-relaxed group-hover:text-slate-700 transition-colors">
+            <p class="text-sm text-slate-600 font-medium leading-relaxed group-hover:text-slate-900 transition-colors">
               {{ item.desc }}
             </p>
           </div>
 
-          <div class="absolute top-0 left-0 w-0 h-1 bg-emerald-500 group-hover:w-full transition-all duration-700"></div>
+          <div class="absolute top-0 left-0 w-0 h-1 bg-emerald-800/40 group-hover:w-full transition-all duration-700"></div>
         </div>
-      </div>
-
-      <div class="mt-20 flex flex-wrap items-center justify-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-900 italic">No Bullshit</span>
-        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-900 italic">No Technical Jargon</span>
-        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-900 italic">Full transparency</span>
       </div>
 
     </div>

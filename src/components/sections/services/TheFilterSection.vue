@@ -1,5 +1,5 @@
 <template>
-  <section ref="targetSection" class="relative py-32 bg-white overflow-hidden border-t border-slate-100">
+  <section id="target-audiens-bisnis" ref="targetSection" class="relative py-32 bg-white overflow-hidden border-t border-slate-100">
     <div class="absolute inset-0 opacity-[0.08] pointer-events-none" 
          :style="{ backgroundImage: 'radial-gradient(#000 0.8px, transparent 0.8px)', backgroundSize: '24px 24px' }">
     </div>
@@ -84,27 +84,23 @@ let observer = null;
 
 const targets = [
   {
-    title: "UMKM Tanpa Website",
-    desc: "Masih bergantung pada brosur fisik? Saatnya punya kantor pusat digital yang bekerja saat Anda tidur.",
-    // Monitor Icon SVG Path
+    title: "Aset Digital Mandiri",
+    desc: "Bosun jualan hanya di marketplace dengan potongan biaya admin yang mencekik? Kendalikan profit Anda 100% di website sendiri.",
     svgIcon: '<rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>'
   },
   {
-    title: "Budak Algoritma IG",
-    desc: "Bosan akun dibatasi atau shadowban? Kendalikan data dan traffic Anda sendiri tanpa aturan pihak ketiga.",
-    // Share/Network Icon SVG Path
-    svgIcon: '<circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>'
+    title: "Dominasi SEO Lokal",
+    desc: "Pastikan saat orang mencari produk Anda di Google, bisnis Andalah yang muncul di peringkat teratas, bukan kompetitor sebelah.",
+    svgIcon: '<circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>'
   },
   {
-    title: "Otoritas Lokal",
-    desc: "Tingkatkan kelas bisnis Anda. Tampil lebih dipercaya dibandingkan kompetitor di Google Maps dan Search.",
-    // Shield/ShieldCheck Icon SVG Path
+    title: "Scale-up Branding",
+    desc: "Website premium mencerminkan kualitas produk Anda. Jangan biarkan desain murahan membuat calon pembeli ragu dengan kredibilitas Anda.",
     svgIcon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path>'
   },
   {
-    title: "Pemilik Anti-Ribet",
-    desc: "Anda jualan, kami urus teknis. Tidak perlu pusing hosting, domain, SSL, atau update plugin yang rusak.",
-    // Bolt/Zap Icon SVG Path
+    title: "Sistem Otomasi 24/7",
+    desc: "Kirim katalog, terima leads, hingga tracking performa SEO dilakukan oleh sistem. Anda tinggal fokus membesarkan skala produksi.",
     svgIcon: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>'
   }
 ];

@@ -83,29 +83,29 @@ let observer = null;
 
 const workflows = [
   {
-    title: "Deep Discovery & Audit",
-    desc: "Kami tidak langsung jualan. Kami membedah model bisnis, kompetitor, dan masalah teknis Anda saat ini.",
-    checks: ["Analisis Pain Points UMKM", "Audit Kompetitor Sektor", "Dokumen Spesifikasi Teknis"]
+    title: "Curhat Bisnis & Cek Masalah",
+    desc: "Kami tidak langsung menawarkan jasa. Kami dengarkan dulu kendala jualan Anda, siapa lawan bisnis Anda, dan apa yang ingin Anda capai.",
+    checks: ["Analisis Masalah Jualan", "Intip Strategi Kompetitor", "Rangkuman Solusi Digital"]
   },
   {
-    title: "Architecture & UI Strategy",
-    desc: "Penyusunan blueprint sistem dan desain UI/UX yang fokus pada kenyamanan navigasi dan kecepatan konversi.",
-    checks: ["Wireframe Low-Fidelity", "Prototyping Interaktif", "Perencanaan Struktur Database"]
+    title: "Rancang Tampilan & Alur Penjualan",
+    desc: "Membuat coretan rencana (blueprint) agar pelanggan Anda nyaman saat berkunjung dan mudah saat ingin membeli produk Anda.",
+    checks: ["Sketsa Tampilan Mudah", "Simulasi Klik Pelanggan", "Penataan Menu Produk"]
   },
   {
-    title: "Clean Code Execution",
-    desc: "Proses development menggunakan standar Vue 3 & Tailwind untuk menghasilkan web yang ringan dan SEO-ready.",
-    checks: ["Development Sprint Harian", "Clean Code Implementation", "On-Page SEO Optimization"]
+    title: "Pengerjaan Sistem Jualan Digital",
+    desc: "Membangun rumah digital Anda dengan pondasi kuat, cepat dibuka di HP, dan mudah ditemukan di pencarian Google.",
+    checks: ["Pembuatan Web Cepat", "Optimasi Google (SEO)", "Tampilan Ramah Handphone"]
   },
   {
-    title: "Rigorous QA & Testing",
-    desc: "Pengujian di berbagai perangkat dan skenario traffic untuk memastikan tidak ada bug yang lolos ke tangan klien.",
-    checks: ["Cross-Browser Testing", "Performance Benchmark", "Security Vulnerability Scan"]
+    title: "Uji Coba & Pastikan Lancar",
+    desc: "Sebelum diluncurkan, kami tes semua tombol dan fungsi. Kami pastikan tidak ada kendala saat pelanggan bertransaksi.",
+    checks: ["Cek Semua Tombol", "Tes Kecepatan Buka", "Keamanan Data Pembeli"]
   },
   {
-    title: "Deployment & Optimization",
-    desc: "Peluncuran ke server produksi disertai dengan monitoring performa dan evaluasi data user secara real-time.",
-    checks: ["Go-Live Zero Downtime", "Google Analytics Setup", "Maintenance & Monthly Report"]
+    title: "Serah Terima & Bantuan Pantau",
+    desc: "Website resmi mengudara. Kami berikan panduan cara pakai dan laporan bulanan agar bisnis Anda terus berkembang.",
+    checks: ["Panduan Admin UMKM", "Laporan Pengunjung", "Bantuan Teknis Rutin"]
   }
 ];
 

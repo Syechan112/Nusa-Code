@@ -9,18 +9,17 @@
     </div>
 
     <div class="container mx-auto px-6 relative z-10 text-center">
-      
       <div 
         class="max-w-4xl mx-auto transition-all duration-1000 transform"
         :class="isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'"
       >
         <h2 class="text-[10px] font-black uppercase tracking-[0.6em] text-emerald-600 mb-8 italic">
-          // Ready to deployment?
+          // Siap Meluncur ke Digital?
         </h2>
         
         <h3 class="text-5xl md:text-8xl font-black text-slate-900 leading-[0.85] tracking-tighter uppercase mb-12">
           MAU PUNYA WEBSITE <br/> 
-          <span class="text-slate-400 italic font-light">TANPA RIBET?</span>
+          <span class="text-emerald-600 italic font-light">TANPA RIBET?</span>
         </h3>
 
         <p class="text-slate-500 font-medium text-lg md:text-xl max-w-xl mx-auto mb-16 leading-relaxed">
@@ -29,8 +28,9 @@
 
         <div class="flex flex-col items-center gap-6">
           <a 
-            href="https://wa.me/yournumber" 
-            class="group relative inline-flex items-center gap-6 md:px-12 md:py-6 px-4 py-3 bg-slate-900 text-white overflow-hidden transition-all duration-500 hover:bg-emerald-600 shadow-2xl hover:shadow-emerald-500/40"
+            :href="waLink" 
+            target="_blank"
+            class="group relative inline-flex items-center gap-6 md:px-12 md:py-6 px-8 py-4 bg-slate-900 text-white overflow-hidden transition-all duration-500 hover:bg-emerald-600 shadow-2xl hover:shadow-emerald-500/40"
           >
             <div class="absolute inset-0 w-0 bg-emerald-500 transition-all duration-500 group-hover:w-full"></div>
             
@@ -48,23 +48,25 @@
             </svg>
           </a>
 
-          <div class="flex items-center gap-3 mt-4">
-            <div class="flex -space-x-2">
-              <div v-for="i in 3" :key="i" class="w-6 h-6 rounded-full border-2 border-white bg-slate-200"></div>
-            </div>
-            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-              Join 50+ UMKM yang sudah go-digital
-            </p>
-          </div>
         </div>
       </div>
-
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
+
+// 1. WhatsApp Configuration Data
+const contact = {
+  phone: "628979673149",
+  text: "Halo, saya tertarik dengan proyek yang ada di portofolio Anda dan ingin diskusi untuk bisnis saya."
+};
+
+// 2. Compute WhatsApp Link
+const waLink = computed(() => {
+  return `https://wa.me/${contact.phone}?text=${encodeURIComponent(contact.text)}`;
+});
 
 const isVisible = ref(false);
 const ctaSection = ref(null);
@@ -78,11 +80,12 @@ onMounted(() => {
   if (ctaSection.value) observer.observe(ctaSection.value);
 });
 
-onUnmounted(() => observer?.disconnect());
+onUnmounted(() => {
+  if (observer) observer.disconnect();
+});
 </script>
 
 <style scoped>
-/* Transisi halus untuk scaling dan opacity */
 .scale-95 { transform: scale(0.95) translateY(20px); }
 .scale-100 { transform: scale(1) translateY(0); }
 </style>

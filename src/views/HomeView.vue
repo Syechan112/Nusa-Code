@@ -5,7 +5,7 @@
     <ServiceSection />
     <ChooseUsSection />
     <PrtofolioSection />
-    <TestimoniSection />
+    <!-- <TestimoniSection /> -->
     <CTASection />
   </main>
 </template>

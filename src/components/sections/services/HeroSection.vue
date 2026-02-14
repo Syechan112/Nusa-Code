@@ -26,30 +26,29 @@
               </span>
             </div>
 
-            <h1 class="text-6xl md:text-8xl lg:text-[110px] font-black text-slate-900 leading-[0.85] tracking-tighter mb-10 uppercase">
-              SOLUSI <br />
+            <h1 class="text-6xl md:text-8xl lg:text-[100px] font-black text-slate-900 leading-[0.85] tracking-tighter mb-10 uppercase">
+              GO DIGITAL <br />
               <span class="relative inline-block">
-                DIGITAL
+                NAIK KELAS
                 <span class="absolute bottom-2 left-0 w-full h-2 bg-emerald-400/20 -z-10"></span>
               </span> 
               <br />
-              <span class="text-emerald-600 italic">PREMIUM.</span>
+              <span class="text-emerald-600 italic">SEKARANG.</span>
             </h1>
 
             <p class="text-lg md:text-xl text-slate-500 font-medium max-w-lg mb-12 leading-relaxed border-l-4 border-emerald-500 pl-6">
-              Berhenti pakai website template murahan. Kami bangun infrastruktur 
-              <span class="text-slate-900 font-bold underline decoration-emerald-500/30">Clean Code</span> 
-              yang meningkatkan konversi penjualan UMKM Anda hingga 200%.
+              Ubah pengunjung website menjadi pembeli setia. Kami bangun website 
+              <span class="text-slate-900 font-bold underline decoration-emerald-500/30">Ringan & SEO Friendly</span> 
+              yang dirancang khusus untuk meningkatkan omzet UMKM hingga 3x lipat.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center gap-6 mt-12">
-              <a 
-                href="https://wa.me/your-number" 
-                target="_blank"
+              <button 
+                @click="startConsultation"
                 class="group relative w-full sm:w-auto px-12 py-6 bg-slate-900 text-white font-bold uppercase tracking-widest text-xs overflow-hidden transition-all hover:bg-emerald-600 shadow-xl shadow-slate-200"
               >
                 <span class="relative z-10">Mulai Konsultasi</span>
-              </a>
+              </button>
               
               <button 
                 @click="scrollToSection"
@@ -114,14 +113,26 @@ const typedLines = ref([]);
 let observer = null;
 
 const codeSnippet = [
-  { text: '<span class="text-pink-500">const</span> <span class="text-blue-400">UmkmScale</span> = {', color: 'text-white' },
-  { text: '  performance: <span class="text-amber-300">"Excellent"</span>,', color: 'text-white' },
-  { text: '  seoReady: <span class="text-amber-300">true</span>,', color: 'text-white' },
-  { text: '  uxOptimized: <span class="text-amber-300">true</span>,', color: 'text-white' },
-  { text: '  modernDesign: <span class="text-emerald-400">"Standard"</span>', color: 'text-white' },
+  { text: '<span class="text-pink-500">const</span> <span class="text-blue-400">BisnisAnda</span> = {', color: 'text-white' },
+  { text: '  status: <span class="text-amber-300">"GoDigital"</span>,', color: 'text-white' },
+  { text: '  googleRanking: <span class="text-amber-300">"Page-1"</span>,', color: 'text-white' },
+  { text: '  visitorToBuyer: <span class="text-amber-300">"High"</span>,', color: 'text-white' },
+  { text: '  supportUMKM: <span class="text-emerald-400">true</span>', color: 'text-white' },
   { text: '};', color: 'text-white' },
-  { text: '<span class="text-blue-400">deploy</span>(UmkmScale);', color: 'text-white' }
+  { text: '<span class="text-blue-400">optimize</span>(BisnisAnda);', color: 'text-white' }
 ];
+
+const phoneNumber = "+628979673149";
+const customerMessage = `Halo, saya tertarik dengan Solusi Digital Premium untuk UMKM. 
+Bisa bantu jelaskan lebih lanjut mengenai optimasi SEO dan pembuatan website clean code?`;
+
+
+const startConsultation = () => {
+  const encodedMessage = encodeURIComponent(customerMessage);
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  
+  window.open(whatsappUrl, '_blank');
+};
 
 const runTypewriter = async () => {
  

@@ -23,25 +23,25 @@
               <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
               <span class="text-[10px] font-black text-emerald-700 uppercase tracking-widest">Partner UMKM Indonesia</span>
             </div>
-            
+                        
             <h1 class="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter leading-[0.95] mb-8">
-              STRATEGI DIGITAL <br />
-              <span class="text-emerald-600">BERBASIS DATA</span> UNTUK PERTUMBUHAN.
+              BANTU BISNIS LOKAL <br />
+              <span class="text-emerald-600">JADI JAGOAN</span> DI DUNIA DIGITAL.
             </h1>
           </header>
-          
+                    
           <h2 class="text-xl md:text-2xl text-slate-500 max-w-2xl leading-relaxed mb-10 font-medium italic">
-            "Kami mengubah kode menjadi profit melalui ekosistem yang teroptimasi secara <span class="text-slate-900 font-bold">SEO dan Konversi</span>." 
+            "Kami tidak sekadar membuat website, tapi membangun <span class="text-slate-900 font-bold">Toko Digital yang Aktif Mendatangkan Pembeli</span> setiap hari." 
           </h2>
 
           <div class="flex flex-wrap gap-10 items-center border-t border-emerald-100 pt-10">
             <div class="group cursor-default">
-              <p class="text-4xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors tracking-tighter">10+</p>
-              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Live Projects</p>
+              <p class="text-4xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors tracking-tighter">7+</p>
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Bisnis Terbantu</p>
             </div>
             <div class="group cursor-default border-l border-emerald-100 pl-10">
-              <p class="text-4xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors tracking-tighter">98% </p>
-              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Satisfaction Rate</p>
+              <p class="text-4xl font-black text-slate-900 group-hover:text-emerald-600 transition-colors tracking-tighter">100%</p>
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Dedikasi Penuh</p>
             </div>
           </div>
         </article>
@@ -49,15 +49,16 @@
         <div class="lg:col-span-5 relative">
           <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
             <img 
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80" 
+              :src="heroData.image" 
+              :alt="heroData.alt"
               class="w-full aspect-[4/5] object-cover"
-              alt="Tim NusaCode"
             />
           </div>
           <div class="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-emerald-50 transform -rotate-3">
-             <span class="text-emerald-600 font-bold text-sm">#CleanCode First</span> 
+              <span class="text-emerald-600 font-bold text-sm">#SolusiBukanJanji</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -66,12 +67,20 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
+// 1. Import gambar menggunakan URL konstruktor (cara terbaik untuk Vite)
+import heroAboutImg from '/assets/image/hero/hero-about.jpg';
+
+// 2. Definisi data dalam objek agar mudah dikelola
+const heroData = {
+  image: heroAboutImg,
+  alt: 'Tim NusaCode yang profesional dan inovatif'
+};
+
 const aboutHero = ref(null);
 const isVisible = ref(false);
 let observer = null;
 
 onMounted(() => {
-  // Intersection Observer for Animation Trigger
   observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       isVisible.value = entry.isIntersecting;

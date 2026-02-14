@@ -9,7 +9,6 @@
       <div class="max-w-3xl mb-20">
         <div class="inline-flex items-center gap-3 mb-6">
           <span class="px-2 py-1 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest">Core Values</span>
-          <span class="text-slate-400 font-mono text-[10px] tracking-widest">V.1.0 // FILTER MANUSIA</span>
         </div>
         <h2 class="text-4xl md:text-6xl font-black text-slate-900 leading-none tracking-tighter mb-6">
           PRINSIP YANG <br/> <span class="text-emerald-600">MENJAGA KUALITAS KODE KAMI.</span>
@@ -70,34 +69,34 @@ let observer = null;
 
 const coreValues = [
   {
-    title: "Radical Transparency",
-    desc: "Kami tidak menyembunyikan masalah teknis di balik istilah rumit. Jika ada kendala, Anda tahu detik itu juga.",
-    example: "Update progres harian via dashboard, bukan ghosting seminggu tanpa kabar."
+    title: "Keterbukaan Jujur",
+    desc: "Kami tidak menggunakan istilah teknis yang membingungkan untuk menutupi masalah. Anda akan selalu tahu kondisi asli proyek Anda.",
+    example: "Laporan kemajuan setiap hari lewat WhatsApp/Dashboard, tanpa perlu ditagih."
   },
   {
-    title: "Extreme Accountability",
-    desc: "Setiap baris kode adalah tanggung jawab kami. Tidak ada alasan 'masalah server' atau 'bug dari sananya'.",
-    example: "Fitur error? Kami perbaiki tanpa tambahan biaya atau alasan bertele-tele."
+    title: "Tanggung Jawab Penuh",
+    desc: "Setiap eror atau kendala adalah tanggung jawab kami. Kami tidak akan menyalahkan server atau pihak lain secara sepihak.",
+    example: "Jika ada fitur yang macet, kami perbaiki segera tanpa biaya tambahan."
   },
   {
-    title: "No-Fluff Engineering",
-    desc: "Kami membangun fitur yang Anda butuhkan, bukan fitur mahal yang hanya terlihat bagus di presentasi.",
-    example: "Fokus pada speed dan konversi, bukan sekadar animasi berat yang memperlambat user."
+    title: "Fitur Tepat Sasaran",
+    desc: "Kami membangun apa yang benar-benar mendatangkan pembeli untuk Anda, bukan fitur mahal yang tidak terpakai.",
+    example: "Fokus pada kecepatan web agar pelanggan tidak kabur karena loading lama."
   },
   {
-    title: "Scalable Thinking",
-    desc: "Membangun untuk masa depan. Kode yang kami tulis hari ini tidak akan menjadi sampah teknologi tahun depan.",
-    example: "Struktur database rapi yang siap menampung lonjakan traffic kapan saja."
+    title: "Sistem Tahan Lama",
+    desc: "Website Anda dirancang agar tidak cepat jadul. Tetap kencang meski barang dagangan dan pembeli Anda bertambah banyak.",
+    example: "Penyusunan data yang rapi agar web tetap ringan dibuka di HP jadul sekalipun."
   },
   {
-    title: "Data-Led Decision",
-    desc: "Opini pribadi tidak relevan. Kami menggunakan data perilaku user untuk setiap perubahan UI/UX.",
-    example: "Desain tombol berubah karena data A/B testing, bukan karena 'feeling'."
+    title: "Keputusan Berbasis Data",
+    desc: "Kami tidak asal tebak dalam mendesain. Semua perubahan didasarkan pada kebiasaan pelanggan Anda saat berbelanja.",
+    example: "Warna tombol beli dipilih karena terbukti paling sering diklik oleh pembeli."
   },
   {
-    title: "Long-Term Partnership",
-    desc: "Kami bukan freelancer lepasan. Kami adalah departemen teknis eksternal untuk pertumbuhan bisnis Anda.",
-    example: "Rutin memberikan laporan optimasi SEO bulanan meskipun proyek sudah selesai."
+    title: "Mitra Tumbuh Bersama",
+    desc: "Kami bukan hanya pembuat web sekali jalan. Kami adalah tim IT Anda yang siap membantu bisnis Anda naik kelas.",
+    example: "Bimbingan rutin dan tips jualan digital meski website sudah selesai dikerjakan."
   }
 ];
 

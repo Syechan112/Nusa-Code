@@ -68,11 +68,26 @@ const visiblePoints = ref([]);
 let observer = null;
 
 const points = [
-  { title: "Kesenjangan Industri", desc: "Banyak agensi hanya fokus pada estetika, melupakan fakta bahwa website adalah alat bisnis yang harus menghasilkan profit." },
-  { title: "Efisiensi Tanpa Drama", desc: "Kami membangun sistem yang ringan agar Anda bisa fokus mengurus bisnis, bukan mengurus bug." },
-  { title: "Data-Driven Result", desc: "Setiap keputusan desain dan kode divalidasi oleh perilaku pengguna nyata." },
-  { title: "Skalabilitas Masa Depan", desc: "Sistem yang siap tumbuh tanpa perlu bongkar pasang total saat traffic meledak." },
-  { title: "Kemitraan Jangka Panjang", desc: "Partner teknis yang menjaga infrastruktur digital Anda tetap aman dan relevan." }
+  { 
+    title: "Bukan Sekadar Pajangan", 
+    desc: "Banyak yang bisa buat web bagus, tapi sedikit yang tahu cara buat web yang menghasilkan pembeli. Kami fokus pada hasil jualan Anda." 
+  },
+  { 
+    title: "Beres Tanpa Ribet", 
+    desc: "Kami urus semua urusan teknis yang pusing itu. Anda cukup fokus jualan dan melayani pelanggan dengan tenang." 
+  },
+  { 
+    title: "Ikuti Kemauan Pelanggan", 
+    desc: "Setiap tombol dan menu kami buat berdasarkan cara pelanggan Anda belanja, bukan sekadar mengikuti selera kami sendiri." 
+  },
+  { 
+    title: "Siap Untuk Jadi Besar", 
+    desc: "Web Anda kami rancang agar tidak eror saat pengunjung meledak. Siap menemani bisnis Anda tumbuh dari kecil hingga raksasa." 
+  },
+  { 
+    title: "Teman Curhat Teknis", 
+    desc: "Kami bukan orang asing yang hilang setelah proyek selesai. Kami adalah mitra yang menjaga 'toko digital' Anda tetap aman setiap hari." 
+  }
 ];
 
 onMounted(() => {

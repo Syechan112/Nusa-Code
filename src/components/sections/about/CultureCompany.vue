@@ -59,28 +59,28 @@ let observer = null;
 
 const cultures = [
   {
-    tag: "Communication",
-    title: "Radical Candor",
-    desc: "Kami membuang basa-basi yang tidak perlu. Masukan diberikan secara jujur dan langsung untuk mencapai solusi tercepat.",
-    practical: "Langsung ke inti masalah, tidak ada politik kantor atau 'hidden agenda'."
+    tag: "Gaya Komunikasi",
+    title: "Jujur & Apa Adanya",
+    desc: "Kami tidak suka basa-basi. Jika ada cara yang lebih murah atau lebih efektif untuk bisnis Anda, kami akan katakan sejujurnya sejak awal.",
+    practical: "Langsung ke inti solusi, tanpa ada biaya tambahan yang disembunyikan."
   },
   {
-    tag: "Decision Making",
-    title: "Logic Over Hierarchy",
-    desc: "Ide terbaiklah yang menang, bukan siapa yang jabatannya paling tinggi. Semua keputusan harus punya dasar logika yang kuat.",
-    practical: "Debat terbuka yang sehat sebelum eksekusi, berbasis data bukan perasaan."
+    tag: "Cara Berpikir",
+    title: "Utamakan Hasil Nyata",
+    desc: "Kami tidak bekerja berdasarkan siapa yang paling senior, tapi berdasarkan ide mana yang paling menguntungkan bagi jualan Anda.",
+    practical: "Diskusi terbuka untuk mencari cara paling cepat agar web Anda menghasilkan uang."
   },
   {
-    tag: "Environment",
-    title: "Deep Work Protocol",
-    desc: "Kami menghargai waktu fokus. Lingkungan kerja kami dirancang untuk meminimalisir distraksi agar kualitas kode tetap terjaga.",
-    practical: "Asynchronous communication diutamakan untuk menjaga alur kerja tim."
+    tag: "Proses Kerja",
+    title: "Fokus & Teliti",
+    desc: "Kami mengatur waktu kerja agar tidak terganggu hal lain. Ini dilakukan agar setiap fitur yang kami buat untuk Anda minim kesalahan (bug).",
+    practical: "Laporan rapi dan sistematis, sehingga Anda tahu progres tanpa perlu bertanya."
   },
   {
-    tag: "Growth",
-    title: "Continuous Refactoring",
-    desc: "Bagi kami, 'selesai' bukan berarti berhenti. Kami selalu mencari cara untuk membuat sistem yang sudah ada menjadi lebih efisien.",
-    practical: "Sesi review kode mingguan untuk memastikan standar kualitas selalu naik."
+    tag: "Standar Mutu",
+    title: "Perbaikan Terus Menerus",
+    desc: "Bagi kami, website yang sudah jadi tetap harus dipantau. Kami selalu mencari celah agar performa toko digital Anda semakin kencang.",
+    practical: "Pengecekan kualitas berkala agar website Anda tidak tertinggal jaman."
   }
 ];
 

@@ -76,13 +76,13 @@ const benefitsList = ref([
   { id: 3, title: "Tombol WA Langsung", desc: "Pelanggan mau tanya? Klik satu tombol, mereka langsung chat ke HP Anda. Gak ribet catat nomor.", svgIcon: '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-12.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path>' },
   { id: 4, title: "Domain & Hosting", desc: "Kami amankan alamat website (.com) dan rumah digital Anda. Anda tinggal terima beres setiap tahun.", svgIcon: '<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3V5"></path>' },
   { id: 5, title: "Gampang Update", desc: "Mau ganti foto atau harga? Bisa sendiri semudah ganti status WA. Kami beri panduan simpelnya.", svgIcon: '<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>' },
-  { id: 6, title: "Cepat Muncul di Google", desc: "Kami rapihkan strukturnya agar saat orang cari produk Anda, website Anda yang muncul duluan.", svgIcon: '<circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>' }
+  { id: 6, title: "Ranking Google Lokal", desc: "Kami optimasi struktur website agar bisnis Anda mudah ditemukan pelanggan di sekitar Anda melalui Google Search & Maps.", svgIcon: '<circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>' }
 ]);
 
-// Animation Observer Logic
+
 onMounted(() => {
   observer = new IntersectionObserver(([entry]) => {
-    // Reset dan Play ulang animasi setiap kali masuk/keluar view
+    
     isVisible.value = entry.isIntersecting;
   }, { threshold: 0.1 });
 
@@ -91,7 +91,7 @@ onMounted(() => {
 
 onUnmounted(() => observer?.disconnect());
 
-// Drag & Drop Logic
+
 const onDragStart = (index) => { draggingIndex.value = index; };
 const onDragEnter = (index) => {
   if (draggingIndex.value !== null && draggingIndex.value !== index) {
@@ -107,7 +107,6 @@ const onDrop = () => { draggingIndex.value = null; };
 </script>
 
 <style scoped>
-/* Resetting Animation Styles */
 .animate-in {
   animation: slideUpIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   animation-delay: var(--delay);
@@ -134,7 +133,6 @@ const onDrop = () => { draggingIndex.value = null; };
 .cursor-grab { cursor: grab; }
 .cursor-grabbing { cursor: grabbing; }
 
-/* Smooth move for list items when swapped */
 .grid > div {
   will-change: transform, opacity;
 }
