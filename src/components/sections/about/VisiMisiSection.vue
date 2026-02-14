@@ -15,9 +15,9 @@
             </div>
             
             <h2 class="text-3xl md:text-6xl lg:text-7xl font-black text-slate-900 tracking-tighter leading-[0.85] mb-8 uppercase">
-              MENGUBAH <span class="text-slate-400">POTENSI LOKAL</span> <br/>
-              MENJADI KEKUATAN <br/>
-              <span class="text-emerald-600 underline decoration-slate-200 underline-offset-8">DIGITAL GLOBAL.</span>
+              MENGANGKAT <span class="text-slate-400">PRODUK LOKAL</span> <br/>
+              MENJADI JAGOAN <br/>
+              <span class="text-emerald-600 underline decoration-slate-200 underline-offset-8">DI DUNIA DIGITAL.</span>
             </h2>
           </header>
         </div>
@@ -73,30 +73,30 @@ let observer = null;
 
 const missions = [
   { 
-    title: "Engineering Excellence", 
-    desc: "Menerapkan Clean Code berbasis SOLID agar sistem UMKM siap tumbuh tanpa limitasi teknis di masa depan.", 
-    metric: "Lighthouse Score > 98" 
+    title: "Sistem Anti Lemot", 
+    desc: "Kami membangun website dengan standar tinggi agar toko online Anda selalu lancar dibuka, tidak peduli seberapa banyak barang yang Anda pajang.", 
+    metric: "Sangat Cepat di HP" 
   },
   { 
-    title: "Psychological Copy", 
-    desc: "Narasi yang disusun bukan untuk memuji diri sendiri, tapi untuk memvalidasi rasa sakit pelanggan dan memberi solusi.", 
-    metric: "Target: +25% Conversion" 
+    title: "Tulisan Penjual Ulung", 
+    desc: "Kalimat di website Anda bukan sekadar teks, tapi disusun untuk meyakinkan calon pembeli agar segera 'klik' tombol beli.", 
+    metric: "Fokus Jualan Laris" 
   },
   { 
-    title: "Organic Dominance", 
-    desc: "Strategi SEO yang membuat bisnis lokal mendominasi halaman pertama, menyingkirkan kompetitor bermodal besar.", 
-    metric: "Top 3 SERP Priority" 
+    title: "Mudah Dicari di Google", 
+    desc: "Kami atur agar nama bisnis Anda muncul di halaman atas saat orang mencari produk, sehingga Anda tidak kalah dari pemain besar.", 
+    metric: "Prioritas Pencarian" 
   },
   { 
-    title: "Zero-Latency UI", 
-    desc: "Optimasi antarmuka yang memastikan interaksi instan, karena setiap milidetik adalah uang bagi pemilik UMKM.", 
-    metric: "Load Time < 1.2s" 
+    title: "Interaksi Tanpa Menunggu", 
+    desc: "Tampilan yang sangat ringan dan tombol yang responsif. Pelanggan Anda tidak akan kabur karena bosan menunggu loading.", 
+    metric: "Buka Web < 1.2 Detik" 
   }
 ];
 
 onMounted(() => {
   const options = {
-    threshold: 0.4, // Terpicu saat hampir setengah elemen masuk
+    threshold: 0.4, 
     rootMargin: "-10% 0px -10% 0px"
   };
 

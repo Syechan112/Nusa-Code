@@ -33,7 +33,7 @@
               index % 2 === 0 ? 'md:flex-row-reverse' : ''
             ]"
           >
-            <div class="w-full md:w-[42%] pl-16 md:pl-0">
+            <div class="w-full md:w-[42%] pl-12 md:pl-0">
               <div 
                 class="p-8 border bg-white transition-all duration-700 relative"
                 :class="activeSteps.includes(index) ? 'border-emerald-500 shadow-xl shadow-emerald-500/5' : 'border-slate-100'"
@@ -109,11 +109,26 @@ const stepRefs = ref([]);
 let observer = null;
 
 const steps = [
-  { title: "Konsultasi Kebutuhan", desc: "Kita ngobrol santai. Ceritain masalah bisnis Anda, kami siapkan resep websitenya." },
-  { title: "Desain & Persetujuan", desc: "Kami kirimkan konsep visualnya. Anda cek, kasih masukan, dan langsung eksekusi." },
-  { title: "Pembuatan Website", desc: "Proses koding dimulai. Kami bangun dengan performa tinggi agar enak dilihat di HP." },
-  { title: "Revisi & QC", desc: "Anda cek hasilnya. Kurang pas? Kita poles lagi sampai benar-benar sempurna." },
-  { title: "Website Online!", desc: "Serah terima kunci. Website Anda mengudara dan siap menyambut pelanggan." }
+  { 
+    title: "Ngobrol Strategi", 
+    desc: "Kita diskusi santai via WA atau Meet. Anda cerita produknya, kami siapkan struktur website yang paling cepat laku." 
+  },
+  { 
+    title: "Cek Konsep Desain", 
+    desc: "Kami kirimkan rancangan visualnya. Anda cek di HP, kalau sudah sreg dan sesuai branding, langsung kita gas koding." 
+  },
+  { 
+    title: "Proses Rakit Sistem", 
+    desc: "Tim mulai membangun website. Kami pastikan kodingnya ringan agar pelanggan Anda tidak kabur karena loading lama." 
+  },
+  { 
+    title: "Uji Coba & Poles", 
+    desc: "Anda tes klik sana-sini. Kalau ada yang kurang pas, kita poles sampai benar-benar mantap sebelum go-public." 
+  },
+  { 
+    title: "Siap Terima Order", 
+    desc: "Website resmi mengudara! Kami berikan panduan cara kelola kontennya semudah update status media sosial." 
+  }
 ];
 
 const handleScroll = () => {

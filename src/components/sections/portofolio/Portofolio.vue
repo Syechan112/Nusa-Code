@@ -101,9 +101,13 @@
         :class="ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
       >
         <p class="text-slate-400 font-mono text-[10px] uppercase tracking-[0.5em] mb-6">Siap Menjadi Bagian Dari Galeri Kami?</p>
-        <button class="px-12 py-6 bg-slate-900 text-white font-black uppercase tracking-[0.3em] text-xs hover:bg-emerald-600 transition-all shadow-xl">
-          Mulai Proyek Anda Sekarang
-        </button>
+        <a 
+          :href="waLink"
+          target="_blank"
+          class="inline-block px-12 py-6 bg-slate-900 text-white font-black uppercase tracking-[0.3em] text-xs hover:bg-emerald-600 transition-all shadow-xl"
+        >
+          Mulai Diskusi Proyek
+        </a>
       </div>
     </div>
   </section>
@@ -220,7 +224,13 @@ const portfolioItems = [
   }
 ];
 
-// State management untuk visibilitas per item
+const contactData = {
+  phone: "628979673149",
+  message: "Halo, saya tertarik dengan proyek yang ada di portofolio Anda dan ingin diskusi untuk bisnis saya."
+};
+
+const waLink = `https://wa.me/${contactData.phone}?text=${encodeURIComponent(contactData.message)}`;
+
 const visibleStates = reactive(portfolioItems.map(() => false));
 const itemRefs = ref([]);
 const ctaRef = ref(null);
@@ -229,7 +239,7 @@ const ctaVisible = ref(false);
 let observer = null;
 
 onMounted(() => {
-  // Opsi Observer: Mengizinkan repeat animation setiap kali masuk/keluar view
+
   const observerOptions = {
     threshold: 0.15,
     rootMargin: "0px 0px -50px 0px"
@@ -237,27 +247,25 @@ onMounted(() => {
 
   observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      // Cari index dari element yang terdeteksi
+  
       const index = itemRefs.value.indexOf(entry.target);
       
       if (index !== -1) {
-        // Toggle visibility: true saat masuk, false saat keluar
+    
         visibleStates[index] = entry.isIntersecting;
       }
 
-      // Logic khusus untuk CTA di bagian bawah
+  
       if (entry.target === ctaRef.value) {
         ctaVisible.value = entry.isIntersecting;
       }
     });
   }, observerOptions);
 
-  // Daftarkan semua item portofolio ke observer
   itemRefs.value.forEach((el) => {
     if (el) observer.observe(el);
   });
 
-  // Daftarkan CTA ke observer
   if (ctaRef.value) observer.observe(ctaRef.value);
 });
 

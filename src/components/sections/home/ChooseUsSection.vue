@@ -13,16 +13,16 @@
         :class="isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
       >
         <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-emerald-100/50 border border-emerald-200">
-          <span class="text-xs font-bold text-emerald-800 uppercase tracking-[0.2em]">Standar Baru Digitalisasi UMKM</span>
+          <span class="text-xs font-bold text-emerald-800 uppercase tracking-[0.2em]">Solusi Digital Anti Ribet</span>
         </div>
         
         <h2 class="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter leading-none mb-6">
-          INVESTASI AMAN, <br />
-          <span class="text-emerald-600 underline decoration-emerald-200 underline-offset-8">BISNIS TUMBUH.</span>
+          UANG AMAN, <br />
+          <span class="text-emerald-600 underline decoration-emerald-200 underline-offset-8">JUALAN MAKIN LANCAR.</span>
         </h2>
         
         <p class="text-lg text-slate-500 font-medium leading-relaxed">
-          Kami mengerti rasa takut Anda saat ingin mulai <span class="font-bold text-emerald-600 underline decoration-emerald-200 underline-offset-8">go digital</span>. Di NusaCode, kami menukar risiko Anda dengan sistem yang transparan dan hasil yang bisa diukur.
+          Kami tahu rasanya ragu buat <span class="font-bold text-emerald-600 underline decoration-emerald-200 underline-offset-8">go digital</span>. Di NusaCode, kami ganti rasa khawatir Anda dengan hasil yang nyata dan laporan yang transparan.
         </p>
       </div>
 
@@ -39,9 +39,9 @@
             <div class="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center mb-8 shadow-lg shadow-emerald-200">
                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
-            <h4 class="text-2xl font-bold text-slate-900 mb-4 italic">Tanpa Molor.</h4>
+            <h4 class="text-2xl font-bold text-slate-900 mb-4 italic">Anti Molor.</h4>
             <p class="text-slate-600 leading-relaxed">
-              Bisnis yang berhenti adalah kerugian. Kami menjamin tanggal peluncuran yang pasti agar Anda bisa segera mulai berjualan dan melayani pelanggan tanpa drama penundaan.
+              Bisnis macet itu rugi. Kami menjamin jadwal selesai yang pasti supaya Anda bisa langsung jualan dan layani pembeli tanpa drama nunggu lama.
             </p>
           </div>
         </div>
@@ -57,9 +57,9 @@
             <div class="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center mb-8 shadow-lg shadow-slate-200">
                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
             </div>
-            <h4 class="text-2xl font-bold text-slate-900 mb-4 italic">Kawal 100%.</h4>
+            <h4 class="text-2xl font-bold text-slate-900 mb-4 italic">Dipantau Terus.</h4>
             <p class="text-slate-600 leading-relaxed">
-              Lupakan trauma dikacangi pengembang. Kami menggunakan jalur komunikasi satu pintu yang responsif. Anda selalu tahu sedang di tahap mana aset digital Anda dibangun.
+              Gak perlu bingung teknis. Kami pakai jalur komunikasi satu pintu yang cepat balasnya. Anda selalu tahu perkembangan aset digital Anda setiap saat.
             </p>
           </div>
         </div>
@@ -75,9 +75,9 @@
             <div class="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center mb-8 shadow-lg shadow-emerald-200">
                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
             </div>
-            <h4 class="text-2xl font-bold text-slate-900 mb-4 italic">Bicara Angka.</h4>
+            <h4 class="text-2xl font-bold text-slate-900 mb-4 italic">Bikin Cuan.</h4>
             <p class="text-slate-600 leading-relaxed">
-              Kami tidak sekadar membuat web <span class="font-bold">cantik</span>. Setiap tombol dan desain dikalibrasi untuk mengubah pengunjung menjadi leads atau pembeli. Kami membangun mesin, bukan pajangan.
+              Kami gak cuma bikin web yang <span class="font-bold">cantik</span>. Kami rancang supaya pengunjung betah dan mau beli. Kami bangun mesin uang, bukan sekadar pajangan.
             </p>
           </div>
         </div>
