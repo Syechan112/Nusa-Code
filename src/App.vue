@@ -1,6 +1,7 @@
 <template>
   <div class="min-h-screen bg-white">
     <TheHeader />
+    <AiChat />
     <RouterView />
     <TheFooter />
   </div>
@@ -9,5 +10,6 @@
 <script setup>
 import { RouterView } from 'vue-router';
 import TheHeader from '@/components/layout/TheHeader.vue';
+import AiChat from './components/layout/ai_intergrate/AiChat.vue';  
 import TheFooter from '@/components/layout/TheFooter.vue';
 </script>
