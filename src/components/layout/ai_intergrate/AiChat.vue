@@ -154,23 +154,17 @@
     isClearModalOpen.value = false;
     };
 
-    const sendMessage = () => {
-    if (!userInput.value.trim()) return;
-    messages.value.push({ role: 'user', text: userInput.value });
-    const input = userInput.value;
-    userInput.value = '';
-    scrollToBottom();
-
     const sendMessage = async () => {
     if (!userInput.value.trim()) return;
 
-    messages.value.push({ role: 'user', text: userInput.value });
     const input = userInput.value;
+
+    messages.value.push({ role: 'user', text: input });
     userInput.value = '';
     scrollToBottom();
 
     try {
-        const res = await fetch('/api/chat', {
+        const res = await fetch('http://localhost:3000/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input })
@@ -191,6 +185,5 @@
     }
 
     scrollToBottom();
-    };
     };
     </script>
