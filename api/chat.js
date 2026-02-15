@@ -1,61 +1,44 @@
-// chat.js (Next.js / app/api/chat/route.js atau pages/api/chat.js)
-import context from '@/context/context.json';
-
-const rateLimit = new Map();
-
+// api/chat.js
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+  // 1. Validasi Metode
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
   }
-
-  const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress || "unknown";
-
-  // Rate limit
-  const now = Date.now();
-  const windowMs = 60 * 1000;
-  const maxRequests = 10;
-
-  if (!rateLimit.has(ip)) rateLimit.set(ip, []);
-  const timestamps = rateLimit.get(ip).filter(t => now - t < windowMs);
-  if (timestamps.length >= maxRequests) {
-    return res.status(429).json({ error: "Terlalu banyak request. Coba lagi nanti." });
-  }
-  timestamps.push(now);
-  rateLimit.set(ip, timestamps);
 
   try {
     const { message } = req.body;
-    if (!message || message.length > 500) {
-      return res.status(400).json({ error: "Input tidak valid atau terlalu panjang" });
+    const apiKey = process.env.GEMINI_API_KEY;
+
+    // 2. Validasi API Key
+    if (!apiKey) {
+      return res.status(500).json({ reply: "Konfigurasi API Key tidak ditemukan di server." });
     }
 
-    // Gunakan context yang sudah di-import
-    const prompt = `Context: ${JSON.stringify(context)}\nUser: ${message}\nAI:`;
-
-    // Panggil Gemini
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${process.env.GEMINI_API_KEY}`;
-
-    const response = await fetch(endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{ role: "user", parts: [{ text: prompt }] }],
-        generationConfig: { maxOutputTokens: 600, temperature: 0.7 } // naikkan token
-      }),
-    });
+    // 3. Eksekusi Request ke Gemini
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [{ role: "user", parts: [{ text: message }] }]
+        }),
+      }
+    );
 
     const data = await response.json();
 
     if (!response.ok) {
-      console.error("FULL ERROR GEMINI:", JSON.stringify(data, null, 2));
-      return res.status(response.status).json({ error: data.error?.message || "Terjadi error dari Gemini" });
+      throw new Error(data.error?.message || "Gemini API Error");
     }
 
-    const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || "Maaf, terjadi kesalahan.";
+    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Maaf, AI tidak memberikan respon.";
+    
+    // 4. Kirim Respon ke Frontend
     return res.status(200).json({ reply });
 
   } catch (error) {
-    console.error("SERVER ERROR:", error);
-    return res.status(500).json({ error: "Server error" });
+    console.error("RUNTIME ERROR:", error.message);
+    return res.status(500).json({ reply: "Server sedang sibuk. Silakan cek log Vercel." });
   }
 }
