@@ -16,13 +16,14 @@
           <span class="text-xs font-bold text-emerald-800 uppercase tracking-[0.2em]">Solusi Digital Anti Ribet</span>
         </div>
         
-        <h2 class="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter leading-none mb-6">
-          UANG AMAN, <br />
-          <span class="text-emerald-600 underline decoration-emerald-200 underline-offset-8">JUALAN MAKIN LANCAR.</span>
+        <h2 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter leading-none mb-6">
+          UANG <span class="text-emerald-600">AMAN</span>, <br />
+          <span class="text-slate-900">JUALAN?</span> <br>
+          <span class="text-emerald-600  decoration-emerald-200 underline">MAKIN LANCAR.</span>
         </h2>
         
         <p class="text-lg text-slate-500 font-medium leading-relaxed">
-          Kami tahu rasanya ragu buat <span class="font-bold text-emerald-600 underline decoration-emerald-200 underline-offset-8">go digital</span>. Di NusaCode, kami ganti rasa khawatir Anda dengan hasil yang nyata dan laporan yang transparan.
+          Kami tahu rasanya ragu buat <span class="font-bold text-emerald-600  decoration-emerald-200">go digital</span>. Di NusaCode, kami ganti rasa khawatir Anda dengan hasil yang nyata dan laporan yang transparan.
         </p>
       </div>
 

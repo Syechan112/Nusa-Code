@@ -65,7 +65,7 @@
               <div v-if="$route.path === item.to" class="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_8px_rgba(16,185,129,0.6)]"></div>
             </RouterLink>
             <div class="p-2 mt-1">
-              <a href="#" class="flex items-center justify-center w-full py-4 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest rounded-xl hover:bg-emerald-600 transition-colors">
+              <a href="https://wa.me/628979673149" target="_blank" class="flex items-center justify-center w-full py-4 bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest rounded-xl hover:bg-emerald-600 transition-colors">
                 Hubungi Kami
               </a>
             </div>
