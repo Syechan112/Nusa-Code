@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+// chat.js (Next.js / app/api/chat/route.js atau pages/api/chat.js)
+import context from '@/context/context.json';
 
 const rateLimit = new Map();
 
@@ -29,12 +29,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Input tidak valid atau terlalu panjang" });
     }
 
-    // Baca context JSON
-    const contextPath = path.resolve("./src/context/context.json");
-    const contextRaw = fs.readFileSync(contextPath, "utf-8");
-    const context = JSON.parse(contextRaw);
-
-    // Gabungkan context + user message ke prompt
+    // Gunakan context yang sudah di-import
     const prompt = `Context: ${JSON.stringify(context)}\nUser: ${message}\nAI:`;
 
     // Panggil Gemini
@@ -45,7 +40,7 @@ export default async function handler(req, res) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         contents: [{ role: "user", parts: [{ text: prompt }] }],
-        generationConfig: { maxOutputTokens: 300, temperature: 0.7 }
+        generationConfig: { maxOutputTokens: 600, temperature: 0.7 } // naikkan token
       }),
     });
 
@@ -53,7 +48,7 @@ export default async function handler(req, res) {
 
     if (!response.ok) {
       console.error("FULL ERROR GEMINI:", JSON.stringify(data, null, 2));
-      return res.status(response.status).json({ error: data.error?.message || "  error" });
+      return res.status(response.status).json({ error: data.error?.message || "Terjadi error dari Gemini" });
     }
 
     const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || "Maaf, terjadi kesalahan.";
