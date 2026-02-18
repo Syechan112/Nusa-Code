@@ -59,7 +59,7 @@ import { ref, onMounted, onUnmounted, computed } from 'vue';
 
 // 1. WhatsApp Configuration Data
 const contact = {
-  phone: "628979673149",
+  phone: "6285780042435",
   text: "Halo, saya tertarik dengan proyek yang ada di portofolio Anda dan ingin diskusi untuk bisnis saya."
 };
 

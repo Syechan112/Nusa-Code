@@ -122,7 +122,7 @@ const codeSnippet = [
   { text: '<span class="text-blue-400">optimize</span>(BisnisAnda);', color: 'text-white' }
 ];
 
-const phoneNumber = "+628979673149";
+const phoneNumber = "6285780042435";
 const customerMessage = `Halo, saya tertarik dengan Solusi Digital Premium untuk UMKM. 
 Bisa bantu jelaskan lebih lanjut mengenai optimasi SEO dan pembuatan website clean code?`;
 
