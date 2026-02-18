@@ -50,7 +50,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const contactData = {
-  phone: "628979673149",
+  phone: "6285780042435",
   message: "Halo, saya tertarik konsultasi untuk pengembangan website saya."
 };
 

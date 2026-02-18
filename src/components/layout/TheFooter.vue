@@ -40,7 +40,7 @@
               </div>
               <div>
                 <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Fast Response</p>
-                <a href="https://wa.me/6208979673149" class="text-xl font-bold text-slate-900 hover:text-emerald-600 transition-colors">+62 897 9673 149</a>
+                <a href="https://wa.me/628979673149" class="text-xl font-bold text-slate-900 hover:text-emerald-600 transition-colors" target="_blank">+62 857 8004 2435</a>
               </div>
             </div>
           </div>

@@ -220,7 +220,7 @@ const plans = [
   }
 ];
 
-const phoneNumber = "628979673149";
+const phoneNumber = "6285780042435";
 
 const sendWhatsApp = (planName) => {
   const message = `Halo, saya ingin ambil PROMO paket ${planName}. Bisa bantu jelaskan detailnya?`;

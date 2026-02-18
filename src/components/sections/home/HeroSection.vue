@@ -110,7 +110,7 @@ const scrollToNext = () => {
   });
 };
 
-const whatsappNumber = "628979673149";
+const whatsappNumber = "6285780042435";
 const whatsappMessage = encodeURIComponent("Halo NusaCode, saya ingin konsultasi.");
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 </script>

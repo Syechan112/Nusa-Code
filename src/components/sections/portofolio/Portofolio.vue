@@ -228,7 +228,7 @@ const handleMobileClick = (url, index) => {
   }, 2000);
 };
 
-const waLink = `https://wa.me/628979673149?text=${encodeURIComponent('Halo, saya tertarik dengan proyek portofolio Anda.')}`;
+const waLink = `https://wa.me/6285780042435?text=${encodeURIComponent('Halo, saya tertarik dengan proyek portofolio Anda.')}`;
 
 let observer = null;
 

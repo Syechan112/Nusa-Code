@@ -29,7 +29,7 @@
 
         <div class="flex flex-col items-center justify-center">
           <a 
-            href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20konsultasi%20strategi%20Digital%20Powerhouse%20untuk%20bisnis%20saya." 
+            href="https://wa.me/6285780042435?text=Halo,%20saya%20ingin%20konsultasi%20strategi%20Digital%20Powerhouse%20untuk%20bisnis%20saya." 
             target="_blank"
             class="group relative md:px-12 px-4 py-4 md:py-7 bg-slate-900 text-white rounded-full font-black text-xl hover:bg-emerald-600 hover:-translate-y-2 transition-all duration-500 shadow-2xl"
           >
