@@ -11,7 +11,7 @@
         :class="headerVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-12 blur-sm'"
       >
         <h2 class="text-xs font-black uppercase tracking-[0.4em] text-emerald-600 mb-4 inline-flex items-center gap-3">
-          <span class="w-8 h-[1px] bg-emerald-600"></span> 03. Galeri Karya (Preview)
+          <span class="w-8 h-[1px] bg-emerald-600"></span> Galeri Karya (Preview)
         </h2>
         <h3 class="text-5xl md:text-7xl font-black text-slate-900 leading-[0.85] tracking-tighter uppercase">
           BUKTI NYATA <br />

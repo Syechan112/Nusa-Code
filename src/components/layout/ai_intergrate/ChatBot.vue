@@ -139,23 +139,38 @@ const handleOptionClick = (option) => {
       }
     }
     else if (option.nextId.startsWith('explain_')) {
-    const feature = option.nextId.toLowerCase();
-    
-    if (feature.includes('seo')) {
-      responseText = "SEO LOKAL itu biar bisnis Kaka muncul di urutan atas pas orang cari jasa Kaka di Google Maps. Biar makin banyak tetangga yang order! 📍";
-    } 
-    else if (feature.includes('copywriting')) {
-      responseText = "COPYWRITING PERSUASIF itu teknik nulis kata-kata jualan yang 'menghipnotis'. Orang yang tadinya cuma liat-liat, jadi pengen langsung beli! ✍️";
-    }
-    else if (feature.includes('ongkir')) {
-      responseText = "CEK ONGKIR OTOMATIS itu biar pembeli nggak usah nanya-nanya lagi. Sistem web Kaka langsung hitung ongkir real-time dari kurir. Praktis banget! 🚚";
-    }
-    else if (feature.includes('payment')) {
-      responseText = "PAYMENT GATEWAY itu biar pembeli bisa bayar pakai QRIS, OVO, atau Bank apa aja. Kaka tinggal terima notifikasi duit masuk! 💸";
-    }
-    else {
-      responseText = "Fitur ini Syehan racik khusus biar web Kaka kenceng dan profesional. Detail teknisnya kita urusin, Kaka TERIMA BERES aja! 😊";
-    }
+      const feature = option.nextId.toLowerCase();
+      
+      if (feature.includes('seo')) {
+        responseText = "SEO LOKAL itu biar bisnis Kaka muncul di urutan atas pas orang cari jasa Kaka di Google Maps. Biar makin banyak tetangga yang order! 📍";
+      } 
+      else if (feature.includes('copywriting')) {
+        responseText = "COPYWRITING PERSUASIF itu teknik nulis kata-kata jualan yang 'menghipnotis'. Orang yang tadinya cuma liat-liat, jadi pengen langsung beli! ✍️";
+      }
+      else if (feature.includes('ongkir')) {
+        responseText = "CEK ONGKIR OTOMATIS itu biar pembeli nggak usah nanya-nanya lagi. Sistem web Kaka langsung hitung ongkir real-time dari kurir. Praktis banget! 🚚";
+      }
+      else if (feature.includes('payment')) {
+        responseText = "PAYMENT GATEWAY itu biar pembeli bisa bayar pakai QRIS, OVO, atau Bank apa aja. Kaka tinggal terima notifikasi duit masuk! 💸";
+      }
+      else if (feature.includes('maps')) {
+        responseText = "INTEGRASI MAPS itu biar lokasi bisnis Kaka tampil interaktif di web. Pelanggan bisa langsung klik tombol 'Rute' dan diarahkan ke Google Maps. Anti nyasar-nyasar club! 🗺️";
+      }
+      else if (feature.includes('menu') || feature.includes('profesional')) {
+        responseText = "MENU PROFESIONAL itu penataan navigasi web yang rapi dan elegan. Calon klien Kaka nggak akan bingung pas nyari info layanan, semua tertata sesuai standar UI/UX modern! 💎";
+      }
+      else if (feature.includes('katalog') || feature.includes('dinamis')) {
+        responseText = "KATALOG DINAMIS itu fitur buat majang produk/jasa Kaka yang bisa di-update kapan aja tanpa ribet coding! Kaka bisa tambah, hapus, atau ganti harga sendiri. Produk Kaka jadi kelihatan rapi dan pro! 🛍️";
+      }
+      else if (feature.includes('wa') || feature.includes('direct') || feature.includes('chat')) {
+        responseText = "DIRECT WA CHAT itu fitur biar pelanggan bisa langsung konsultasi atau order ke WhatsApp Kaka cuma dengan satu klik! Gak perlu simpan nomor manual, jadi peluang mereka buat belanja jadi jauh lebih besar! 📲✨";
+      }
+      else if (feature.includes('mobile') || feature.includes('first')) {
+        responseText = "MOBILE-FIRST itu artinya web Kaka didesain khusus supaya 'super nyaman' pas dibuka di HP. Bukan cuma sekadar bisa dibuka, tapi tulisannya pas, tombolnya gampang diklik jempol, dan loadingnya ringan banget. Karena 90% pembeli datangnya dari HP, Kak! 📱⚡";
+      }
+      else {
+        responseText = "Fitur ini NusaCode racik khusus biar web Kaka kenceng dan profesional. Detail teknisnya kita urusin, Kaka TERIMA BERES aja! 😊";
+      }
     }
     else if (option.nextId === 'workflow') {
       responseText = "Ini alur kerja kita di Nusa Code Kak:\n\n" + contextData.knowledge_base.workflow_phases.join('\n') + "\n\nKita rapi banget kan? Hehe 😊";
