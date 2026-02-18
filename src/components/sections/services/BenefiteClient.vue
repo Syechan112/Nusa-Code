@@ -8,7 +8,7 @@
       
       <div class="max-w-3xl mb-16">
         <div class="inline-block px-3 py-1 bg-emerald-400 text-white text-[10px] font-black tracking-[0.3em] uppercase mb-6">
-          Standard Deliverables // 2024
+          Standard Deliverables
         </div>
         <h3 class="text-5xl md:text-7xl font-black text-slate-900 leading-[0.8] tracking-tighter uppercase mb-8">
           APA YANG <br/> <span class="text-emerald-500 italic">ANDA DAPATKAN.</span>

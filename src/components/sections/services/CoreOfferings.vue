@@ -196,7 +196,7 @@ const plans = [
     discountBadge: "58%",
     currency: "Rb",
     currencyDiscount: "Rb",
-    features: ["Fokus Konversi Penjualan", "Copywriting Persuasif", "Direct WhatsApp Chat", "Mobile-First Design", "2 Hari Pengerjaan"]
+    features: ["Fokus Konversi Penjualan", "Copywriting Persuasif", "Direct WhatsApp Chat", "Mobile-First Design", "2 Hari Pengerjaan", "Gratis Domain .biz"]
   },
   {
     type: "Multi Pages",
@@ -207,7 +207,7 @@ const plans = [
     currency: "Rb",
     currencyDiscount: "Jt",
     isFeatured: true,
-    features: ["Struktur Menu Profesional", "Halaman Layanan & Galeri", "Optimalisasi SEO Lokal", "Integrasi Google Maps", "Blog Management"]
+    features: ["Struktur Menu Profesional", "Halaman Layanan & Galeri", "Optimalisasi SEO Lokal", "Integrasi Google Maps", "Blog Management", "Gratis Domain .biz"]
   },
   {
     type: "Full Store",
@@ -216,7 +216,7 @@ const plans = [
     originalPrice: "5.5",
     discountBadge: "Limited Deal",
     currency: "jt",
-    features: ["Katalog Produk Dinamis", "Sistem Keranjang Belanja", "Cek Ongkir Otomatis", "Payment Gateway Ready", "Laporan Penjualan Dasar"]
+    features: ["Katalog Produk Dinamis", "Sistem Keranjang Belanja", "Payment Gateway Ready", "Laporan Penjualan Dasar", "Gratis Domain .biz"]
   }
 ];
 
